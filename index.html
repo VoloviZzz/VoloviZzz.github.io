@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" >
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Книга Желаний</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div id="alert">
+      <div class="title"></div>
+      <div class="desc"></div>
+    </div>
+    <div class="cont">
+      <div class="form profilesList">
+        <h2>Список желаний</h2>
+        <div class="search">
+          🔍<input class="search_input" type="text" placeholder="Начните писать название...">
+        </div>
+        <div class="people">
+          <ul class="people-list">
+            <!-- контент -->
+          </ul>
+        </div>
+      </div>
+      <div class="sub-cont">
+        <div class="img">
+          <div class="img__text m--up">
+            <h2>Книга Желаний</h2>
+            <p>Хранилище желаний для одного человека в мире, но для самого лучшего.</p>
+          </div>
+          <div class="img__text m--in">
+            <h2>Желание</h2>
+            <p>Если данные о желании не соответствуют действительности - измените их.</p>
+          </div>
+          <div class="img__btn">
+            <span class="m--up add-new-people">Добавить</span>
+            <span class="m--in edit2">Изменить</span>
+          </div>
+        </div>
+        <div class="form profile">
+          <div class="control">
+            <span class="back"><</span>
+            <span class="edit">✎</span>
+            <span class="remove">✕</span>
+          </div>
+          <h2>Данные профиля</h2>
+          <label class="form-elem name">
+            <span>Название</span>
+            <input disabled type="text" placeholder="Иванов Иван Иванович" />
+          </label>
+          <label class="form-elem ">
+            <span>Цена</span>
+            <input disabled type="number" placeholder="500р" />
+          </label>
+          <label class="form-elem">
+            <span>Где она есть</span>
+            <input disabled type="text" placeholder="магазин" />
+          </label>
+          <label class="form-elem">
+            <span>Где она есть ещё</span>
+            <input disabled type="text" placeholder="ещё магазин" />
+          </label>
+          <label class="form-elem">
+            <span>ссылка</span>
+            <input disabled type="email" placeholder="https://your-link.ru"/>
+          </label>
+          <label class="form-elem comment">
+            <span>Примечание</span>
+            <textarea disabled rows="3" cols="80" placeholder="Текст примечания"></textarea>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <script  src="js/index.js"></script>
+  </body>
+</html>
