@@ -93,6 +93,10 @@ var Book = {
 	  Book.opened_form_id = people[0];
 	},
 	whereIAm: function () {
+		if (decodeURIComponent(window.location.search)) {
+			 Alert.info({title: 'Сожалею', desc:'Добавлять или изменять желания друзей не в ваших силах'});
+			 return;
+		}
 	  var cont = Array.from(document.querySelector('.cont').classList).includes('s--profile') ?
 	  Book.editting() :
 	  Book.add_form()
@@ -132,6 +136,10 @@ var Book = {
 	  Book.swipe();
 	},
 	editting: function () {
+		if (decodeURIComponent(window.location.search)) {
+			 Alert.info({title: 'Сожалею', desc:'Добавлять или изменять желания друзей не в ваших силах'});
+			 return;
+		}
 	  if (Book.editting_mode == true) {
 		Alert.info({title: 'Обратите внимание', desc:'Выключен режим редактирования.'})
 		Book.editting_mode = false;
@@ -194,7 +202,7 @@ var Book = {
 	generateLink() {
 		var list = localStorage.getItem('people');
 		var link_list = 'http://elmsoftwere.ru/?' + encodeURIComponent(list);
-		document.querySelector('.send_btn').innerHTML = `<a onclick="Book.copyLink('${link_list}')" href=${link_list}>Кликните, что бы скопировать ссылку</a>`;
+		document.querySelector('.send_btn').innerHTML = `<a onclick="Book.copyLink('${link_list}')" href='#'>Кликните, что бы скопировать ссылку</a>`;
 		var url = new URL(link_list);
 	},
 	init: function () {
@@ -214,7 +222,11 @@ var Book = {
 		document.querySelectorAll('.people-elem').forEach(elem => {
 				elem.addEventListener('click', Book.open_profile);
 			});
-		},
+			if (decodeURIComponent(window.location.search)) { 
+				document.querySelector('.form.profilesList h2').innerText = 'Список желаний Вашего друга'; 
+				document.querySelector('.send_btn').innerHTML = `<a href="http://elmsoftwere.ru">Перейти на свой список желаний</a>`;
+			}
+	},
 	open_profile: function() {
 		Book.opened_form_id = this.dataset.id;
 		Book.set_form(Book.get_people(this.dataset.id));
