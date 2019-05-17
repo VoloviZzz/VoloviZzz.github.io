@@ -202,7 +202,7 @@ button {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-a{
+.send_btn a{
   color: aliceblue;
 }
 .send_btn{
