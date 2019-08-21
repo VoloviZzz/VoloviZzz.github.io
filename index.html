@@ -1,82 +1,365 @@
 <!DOCTYPE html>
 <html lang="ru" >
-
   <head>
-    <meta charset="UTF-8">
-    <title>Книга Желаний</title>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Лист тестовых страниц</title>
+    <link rel='stylesheet' href='css/style.css' />
+    <link rel='stylesheet' href='instagram/style.css' />
+    <style>
+      @keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade{10%{transform:scale(1, 1)}35%{transform:scale(1, 1.7)}40%{transform:scale(1, 1.7)}50%{opacity:1}60%{transform:scale(1, 1)}100%{transform:scale(1, 1);opacity:0}}[data-language] code,[class^="lang"] code,pre [data-language],pre [class^="lang"]{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";animation:fade-in 50ms ease-in-out 2s forwards}[data-language] code.rainbow,[class^="lang"] code.rainbow,pre [data-language].rainbow,pre [class^="lang"].rainbow{animation:none;transition:opacity 50ms ease-in-out}[data-language] code.loading,[class^="lang"] code.loading,pre [data-language].loading,pre [class^="lang"].loading{animation:none}[data-language] code.rainbow-show,[class^="lang"] code.rainbow-show,pre [data-language].rainbow-show,pre [class^="lang"].rainbow-show{opacity:1}pre{position:relative}pre.loading .preloader div{animation-play-state:running}pre.loading .preloader div:nth-of-type(1){background:#0081f5;animation:fade 1.5s 300ms linear infinite}pre.loading .preloader div:nth-of-type(2){background:#5000f5;animation:fade 1.5s 438ms linear infinite}pre.loading .preloader div:nth-of-type(3){background:#9000f5;animation:fade 1.5s 577ms linear infinite}pre.loading .preloader div:nth-of-type(4){background:#f50419;animation:fade 1.5s 715ms linear infinite}pre.loading .preloader div:nth-of-type(5){background:#f57900;animation:fade 1.5s 853ms linear infinite}pre.loading .preloader div:nth-of-type(6){background:#f5e600;animation:fade 1.5s 992ms linear infinite}pre.loading .preloader div:nth-of-type(7){background:#00f50c;animation:fade 1.5s 1130ms linear infinite}pre .preloader{position:absolute;top:12px;left:10px}pre .preloader div{width:12px;height:12px;border-radius:4px;display:inline-block;margin-right:4px;opacity:0;animation-play-state:paused;animation-fill-mode:forwards}pre{border:1px solid #ccc;word-wrap:break-word;/* padding:6px 10px; */line-height:19px;margin-bottom: 0px;}pre code{border:0;padding:0;margin:0;border-radius:0}code{border:1px solid #eaeaea;margin:0px 2px;padding:0px 5px;font-size:12px;}pre,code{font-family:Consolas, 'Liberation Mono', Courier, monospace;color:#333;background:#f8f8f8;border-radius:3px;}pre,pre code{/* font-size:13px; */}pre .comment{color:#998}pre .support{color:#0086B3}pre .tag,pre .tag-name{color:navy}pre .keyword,pre .css-property,pre .vendor-fix,pre .sass,pre .class,pre .id,pre .css-value,pre .entity.function,pre .storage.function{font-weight:bold}pre .css-property,pre .css-value,pre .vendor-fix,pre .support.namespace{color:#333}pre .constant.numeric,pre .keyword.unit,pre .hex-color{font-weight:normal;color:#099}pre .entity.class{color:#458}pre .entity.id,pre .entity.function{color:#900}pre .attribute,pre .variable{color:teal}pre .string,pre .support.value{font-weight:normal;color:#d14}pre .regexp{color:#009926}
+    </style>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css'>
   </head>
-
   <body>
-    <div id="alert">
-      <div class="title"></div>
-      <div class="desc"></div>
-    </div>
-    <div class="cont">
-      
-      <div class="form profilesList">
-        <h2>Список желаний</h2>
-        <div class="search">
-          🔍<input class="search_input" type="text" placeholder="Начните писать название...">
-        </div>
-        <div class="people">
-          <ul class="people-list">
-            <!-- контент -->
-          </ul>
-        </div>
-      </div>
-      <div class="sub-cont">
-        <div class="img">
-          <div class="img__text m--up">
-            <h2>Книга Желаний</h2>
-            <p>Хранилище желаний для одного человека в мире, но для самого лучшего.</p>
-            <div class="send_btn">Отправить желания другу</div>
-          </div>
-          <div class="img__text m--in">
-            <h2>Желание</h2>
-            <p>Если данные о желании не соответствуют действительности - измените их.</p>
-          </div>
-          <div class="img__btn">
-            <span class="m--up add-new-people">Добавить</span>
-            <span class="m--in edit2">Изменить</span>
-          </div>
-        </div>
-        <div class="form profile">
-          <div class="control">
-            <span class="back"><</span>
-            <span class="edit">✎</span>
-            <span class="remove">✕</span>
-          </div>
-          <h2>Данные профиля</h2>
-          <label class="form-elem name">
-            <span>Название</span>
-            <input disabled type="text" placeholder="Иванов Иван Иванович" />
-          </label>
-          <label class="form-elem ">
-            <span>Цена</span>
-            <input disabled type="number" placeholder="500р" />
-          </label>
-          <label class="form-elem">
-            <span>Где она есть</span>
-            <input disabled type="text" placeholder="магазин" />
-          </label>
-          <label class="form-elem">
-            <span>Где она есть ещё</span>
-            <input disabled type="text" placeholder="ещё магазин" />
-          </label>
-          <label class="form-elem">
-            <span>ссылка</span>
-            <input disabled type="email" placeholder="https://your-link.ru"/>
-          </label>
-          <label class="form-elem comment">
-            <span>Примечание</span>
-            <textarea disabled rows="3" cols="80" placeholder="Текст примечания"></textarea>
-          </label>
-        </div>
-      </div>
-    </div>
+    <div class="page-container">
+      <div class="section" id="section1">
+        <div class="grid">
+          <img src="img/image(6).png" alt="This is a jQuery plugin to create a nice and easy data grid component in your site">
+          <div id="first_grid"></div>
+          <br>
+          <pre style="text-align: left;">
+            <code data-language="JavaScript">
+              const grid = new DataGrid({
+                element: document.getElementById('first_grid'),
+                dataSet: data,
+                checkbox: true,
+                header: [
+                {title: 'Name', key: 'name'},
+                {title: 'Secondname', key: 'secondname'},
+                {title: 'Phone', key: 'phone'},
+                ],
+              });
+            </code>
+          </pre>
+          <br>
+          <img src="img/image.png" alt="simple and wide column customization">
+          <div id="second_grid"></div>
+          <br>
+          <img src="img/image(1).png" alt="Event handler on any cell and built-in search">
+          <div id="third_grid"></div>
 
-    <script  src="js/index.js"></script>
+          <br>
+          <pre style="text-align: left;">
+            <code data-language="JavaScript">
+              const grid3 = new DataGrid({
+                element: document.getElementById('third_grid'),
+                dataSet: data,
+                checkbox: true,
+                header: [
+                  {title: 'Name', key: 'name'},
+                  {title: 'Secondname', key: 'secondname'},
+                  {title: 'Phone', key: 'phone'},
+                ],
+                  cellEvent: (elem, column) => {
+                    console.log(elem);
+                    console.log(column);
+                    elem.style.backgroundColor = '#FD018F';
+                    setTimeout(function () {
+                      elem.style.backgroundColor = '#FFFFFF';
+                    }, 200);
+                  },
+                  headerEvent: (elem, column) => {
+                    console.log(elem);
+                    console.log(column);
+                    elem.style.backgroundColor = '#FD018F';
+                    setTimeout(function () {
+                      elem.style.backgroundColor = '#9d40de';
+                    }, 200);
+                  },
+                  checkboxEvent: (value, cell, checkbox) => {
+                    console.log(value);
+                    console.log(cell);
+                    console.log(checkbox);
+                    cell.style.backgroundColor = '#FD018F';
+                    setTimeout(function () {
+                      cell.style.backgroundColor = '#FFFFFF';
+                    }, 200);
+                  },
+              });
+            </code>
+          </pre>
+          <br>
+          <br>
+          <br>
+
+        </div>
+      </div>
+      <div class="section" id="section2">
+        <div class="bg-wrapper">
+          <section class="middal-content">
+            <div class="card">
+              <div class="left">
+                <img class="wordmark" src="img/instaTop.png" alt="instaTop">
+              </div>
+              <div class="right">
+                <div class="svgContainer">
+              		<div>
+              			<svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+              				<defs>
+              					<circle id="armMaskPath" cx="100" cy="100" r="100"/>
+              				</defs>
+              				<clipPath id="armMask">
+              					<use xlink:href="#armMaskPath" overflow="visible"/>
+              				</clipPath>
+              				<circle cx="100" cy="100" r="100" fill="#a9ddf3"/>
+              				<g class="body">
+              					<path class="bodyBGchanged" style="display: none;" fill="#FFFFFF" d="M200,122h-35h-14.9V72c0-27.6-22.4-50-50-50s-50,22.4-50,50v50H35.8H0l0,91h200L200,122z"/>
+              					<path class="bodyBGnormal" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoinn="round" fill="#FFFFFF" d="M200,158.5c0-20.2-14.8-36.5-35-36.5h-14.9V72.8c0-27.4-21.7-50.4-49.1-50.8c-28-0.5-50.9,22.1-50.9,50v50 H35.8C16,122,0,138,0,157.8L0,213h200L200,158.5z"/>
+              					<path class="bodyBGpyzo" fill="#DDF1FA" d="M100,156.4c-22.9,0-43,11.1-54.1,27.7c15.6,10,34.2,15.9,54.1,15.9s38.5-5.8,54.1-15.9 C143,167.5,122.9,156.4,100,156.4z"/>
+              				</g>
+              				<g class="earL">
+              					<g class="outerEar" fill="#ddf1fa" stroke="#3a5e77" stroke-width="2.5">
+              						<circle cx="47" cy="83" r="11.5"/>
+              						<path d="M46.3 78.9c-2.3 0-4.1 1.9-4.1 4.1 0 2.3 1.9 4.1 4.1 4.1" stroke-linecap="round" stroke-linejoin="round"/>
+              					</g>
+              					<g class="earHair">
+              						<rect x="51" y="64" fill="#FFFFFF" width="15" height="35"/>
+              						<path d="M53.4 62.8C48.5 67.4 45 72.2 42.8 77c3.4-.1 6.8-.1 10.1.1-4 3.7-6.8 7.6-8.2 11.6 2.1 0 4.2 0 6.3.2-2.6 4.1-3.8 8.3-3.7 12.5 1.2-.7 3.4-1.4 5.2-1.9" fill="#fff" stroke="#3a5e77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              					</g>
+              				</g>
+              				<g class="earR">
+              					<g class="outerEar">
+              						<circle fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" cx="153" cy="83" r="11.5"/>
+              						<path fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M153.7,78.9 c2.3,0,4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1"/>
+              					</g>
+              					<g class="earHair">
+              						<rect x="134" y="64" fill="#FFFFFF" width="15" height="35"/>
+              						<path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M146.6,62.8 c4.9,4.6,8.4,9.4,10.6,14.2c-3.4-0.1-6.8-0.1-10.1,0.1c4,3.7,6.8,7.6,8.2,11.6c-2.1,0-4.2,0-6.3,0.2c2.6,4.1,3.8,8.3,3.7,12.5 c-1.2-0.7-3.4-1.4-5.2-1.9"/>
+              					</g>
+              				</g>
+              				<path class="chin" d="M84.1 121.6c2.7 2.9 6.1 5.4 9.8 7.5l.9-4.5c2.9 2.5 6.3 4.8 10.2 6.5 0-1.9-.1-3.9-.2-5.8 3 1.2 6.2 2 9.7 2.5-.3-2.1-.7-4.1-1.2-6.1" fill="none" stroke="#3a5e77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              				<path class="face" fill="#DDF1FA" d="M134.5,46v35.5c0,21.815-15.446,39.5-34.5,39.5s-34.5-17.685-34.5-39.5V46"/>
+              				<path class="hair" fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M81.457,27.929 c1.755-4.084,5.51-8.262,11.253-11.77c0.979,2.565,1.883,5.14,2.712,7.723c3.162-4.265,8.626-8.27,16.272-11.235 c-0.737,3.293-1.588,6.573-2.554,9.837c4.857-2.116,11.049-3.64,18.428-4.156c-2.403,3.23-5.021,6.391-7.852,9.474"/>
+              				<g class="eyebrow">
+              					<path fill="#FFFFFF" d="M138.142,55.064c-4.93,1.259-9.874,2.118-14.787,2.599c-0.336,3.341-0.776,6.689-1.322,10.037 c-4.569-1.465-8.909-3.222-12.996-5.226c-0.98,3.075-2.07,6.137-3.267,9.179c-5.514-3.067-10.559-6.545-15.097-10.329 c-1.806,2.889-3.745,5.73-5.816,8.515c-7.916-4.124-15.053-9.114-21.296-14.738l1.107-11.768h73.475V55.064z"/>
+              					<path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M63.56,55.102 c6.243,5.624,13.38,10.614,21.296,14.738c2.071-2.785,4.01-5.626,5.816-8.515c4.537,3.785,9.583,7.263,15.097,10.329 c1.197-3.043,2.287-6.104,3.267-9.179c4.087,2.004,8.427,3.761,12.996,5.226c0.545-3.348,0.986-6.696,1.322-10.037 c4.913-0.481,9.857-1.34,14.787-2.599"/>
+              				</g>
+              				<g class="eyeL">
+              					<circle cx="85.5" cy="78.5" r="3.5" fill="#3a5e77"/>
+              					<circle cx="84" cy="76" r="1" fill="#fff"/>
+              				</g>
+              				<g class="eyeR">
+              					<circle cx="114.5" cy="78.5" r="3.5" fill="#3a5e77"/>
+              					<circle cx="113" cy="76" r="1" fill="#fff"/>
+              				</g>
+              				<g class="mouth">
+              					<path class="mouthBG" fill="#617E92" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/>
+              					<path style="display: none;" class="mouthSmallBG" fill="#617E92" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/>
+              					<path style="display: none;" class="mouthMediumBG" d="M95,104.2c-4.5,0-8.2-3.7-8.2-8.2v-2c0-1.2,1-2.2,2.2-2.2h22c1.2,0,2.2,1,2.2,2.2v2 c0,4.5-3.7,8.2-8.2,8.2H95z"/>
+              					<path style="display: none;" class="mouthLargeBG" d="M100 110.2c-9 0-16.2-7.3-16.2-16.2 0-2.3 1.9-4.2 4.2-4.2h24c2.3 0 4.2 1.9 4.2 4.2 0 9-7.2 16.2-16.2 16.2z" fill="#617e92" stroke="#3a5e77" stroke-linejoin="round" stroke-width="2.5"/>
+              					<defs>
+              						<path id="mouthMaskPath" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/>
+              					</defs>
+              					<clipPath id="mouthMask">
+              						<use xlink:href="#mouthMaskPath" overflow="visible"/>
+              					</clipPath>
+              					<g clip-path="url(#mouthMask)">
+              						<g class="tongue">
+              							<circle cx="100" cy="107" r="8" fill="#cc4a6c"/>
+              							<ellipse class="tongueHighlight" cx="100" cy="100.5" rx="3" ry="1.5" opacity=".1" fill="#fff"/>
+              						</g>
+              					</g>
+              					<path clip-path="url(#mouthMask)" class="tooth" style="fill:#FFFFFF;" d="M106,97h-4c-1.1,0-2-0.9-2-2v-2h8v2C108,96.1,107.1,97,106,97z"/>
+              					<path class="mouthOutline" fill="none" stroke="#3A5E77" stroke-width="2.5" stroke-linejoin="round" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/>
+              				</g>
+              				<path class="nose" d="M97.7 79.9h4.7c1.9 0 3 2.2 1.9 3.7l-2.3 3.3c-.9 1.3-2.9 1.3-3.8 0l-2.3-3.3c-1.3-1.6-.2-3.7 1.8-3.7z" fill="#3a5e77"/>
+              				<g class="arms" clip-path="url(#armMask)">
+              					<g class="armL" style="visibility: hidden;">
+              						<polygon fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="121.3,98.4 111,59.7 149.8,49.3 169.8,85.4"/>
+              						<path fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M134.4,53.5l19.3-5.2c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-10.3,2.8"/>
+              						<path fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M150.9,59.4l26-7c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-21.3,5.7"/>
+
+              						<g class="twoFingers">
+              							<path fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M158.3,67.8l23.1-6.2c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-23.1,6.2"/>
+              							<path fill="#A9DDF3" d="M180.1,65l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L180.1,65z"/>
+              							<path fill="#DDF1FA" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M160.8,77.5l19.4-5.2c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-18.3,4.9"/>
+              							<path fill="#A9DDF3" d="M178.8,75.7l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L178.8,75.7z"/>
+              						</g>
+              						<path fill="#A9DDF3" d="M175.5,55.9l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L175.5,55.9z"/>
+              						<path fill="#A9DDF3" d="M152.1,50.4l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L152.1,50.4z"/>
+              						<path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M123.5,97.8 c-41.4,14.9-84.1,30.7-108.2,35.5L1.2,81c33.5-9.9,71.9-16.5,111.9-21.8"/>
+              						<path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M108.5,60.4 c7.7-5.3,14.3-8.4,22.8-13.2c-2.4,5.3-4.7,10.3-6.7,15.1c4.3,0.3,8.4,0.7,12.3,1.3c-4.2,5-8.1,9.6-11.5,13.9 c3.1,1.1,6,2.4,8.7,3.8c-1.4,2.9-2.7,5.8-3.9,8.5c2.5,3.5,4.6,7.2,6.3,11c-4.9-0.8-9-0.7-16.2-2.7"/>
+              						<path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M94.5,103.8 c-0.6,4-3.8,8.9-9.4,14.7c-2.6-1.8-5-3.7-7.2-5.7c-2.5,4.1-6.6,8.8-12.2,14c-1.9-2.2-3.4-4.5-4.5-6.9c-4.4,3.3-9.5,6.9-15.4,10.8 c-0.2-3.4,0.1-7.1,1.1-10.9"/>
+              						<path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M97.5,63.9 c-1.7-2.4-5.9-4.1-12.4-5.2c-0.9,2.2-1.8,4.3-2.5,6.5c-3.8-1.8-9.4-3.1-17-3.8c0.5,2.3,1.2,4.5,1.9,6.8c-5-0.6-11.2-0.9-18.4-1 c2,2.9,0.9,3.5,3.9,6.2"/>
+              					</g>
+              					<g class="armR" style="visibility: hidden;">
+              						<path fill="#ddf1fa" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5" d="M265.4 97.3l10.4-38.6-38.9-10.5-20 36.1z"/>
+              						<path fill="#ddf1fa" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5" d="M252.4 52.4L233 47.2c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l10.3 2.8M226 76.4l-19.4-5.2c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l18.3 4.9M228.4 66.7l-23.1-6.2c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l23.1 6.2M235.8 58.3l-26-7c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l21.3 5.7"/>
+              						<path fill="#a9ddf3" d="M207.9 74.7l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8zM206.7 64l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8zM211.2 54.8l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8zM234.6 49.4l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8z"/>
+              						<path fill="#fff" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M263.3 96.7c41.4 14.9 84.1 30.7 108.2 35.5l14-52.3C352 70 313.6 63.5 273.6 58.1"/>
+              						<path fill="#fff" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M278.2 59.3l-18.6-10 2.5 11.9-10.7 6.5 9.9 8.7-13.9 6.4 9.1 5.9-13.2 9.2 23.1-.9M284.5 100.1c-.4 4 1.8 8.9 6.7 14.8 3.5-1.8 6.7-3.6 9.7-5.5 1.8 4.2 5.1 8.9 10.1 14.1 2.7-2.1 5.1-4.4 7.1-6.8 4.1 3.4 9 7 14.7 11 1.2-3.4 1.8-7 1.7-10.9M314 66.7s5.4-5.7 12.6-7.4c1.7 2.9 3.3 5.7 4.9 8.6 3.8-2.5 9.8-4.4 18.2-5.7.1 3.1.1 6.1 0 9.2 5.5-1 12.5-1.6 20.8-1.9-1.4 3.9-2.5 8.4-2.5 8.4"/>
+              					</g>
+              				</g>
+              			</svg>
+              		</div>
+              	</div>
+                <div class="productInfo">
+                  <h1>Продвижение в Instagram</h1>
+                  <h2><span id="price">500</span>₽/месяц</h2>
+                  <div class="details">
+                    <div class="size">
+                      <h4>Количество аккаунтов</h4>
+                      <div id="pagination-container">
+                        <div id="indicator"></div>
+                        <a class="pag-link" href="#">1</a>
+                        <a class="pag-link" href="#">2</a>
+                        <a class="pag-link" href="#">3</a>
+                        <a class="pag-link" href="#">4</a>
+                        <svg id="hand-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 450">
+                          <path fill="#3A5E77" d="M40.6 523C12.5 475.6-1 425.4.5 373.7c1.2-40.7 11.7-81.6 31.2-121.6 31.4-64.4 75.5-104.7 80.4-109.1l79.9 89.5.2-.2c-.3.3-32.9 30.3-54.1 75.4-25.5 54.2-23.6 104.6 5.7 154.1L40.6 523z"/>
+                          <g id="fingers">
+                            <path fill="#DDF1FA" d="M188.4 54c-6 9.8-8.1 21.5-6.6 32.7 1.4 11.2 6.4 21.8 13.5 29.7 6.7 7.4 6.2 18.8-1.2 25.6-7.4 6.7-18.8 6.2-25.6-1.2-.6-.7-1.2-1.4-1.7-2.2l-.5-.7c-9.9-15.1-14.8-32.7-14.4-50.1.2-8.7 1.7-17.3 4.7-25.5 2.9-8.2 7.3-15.8 12.8-22.4 4.2-5 11.7-5.6 16.6-1.4 4.5 3.8 5.5 10.3 2.4 15.2v.3z"/>
+                            <path fill="#A9DDF3" d="M180.3 39.6l-6.4 9c-.7.9-2 1.1-2.9.5l-2.5-1.8c-.9-.7-1.1-2-.5-2.9l2.7-3.8c2.1-3 6.3-3.7 9.2-1.5l.3.2c.2 0 .2.2.1.3z"/>
+                            <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M166.5 137.9c-9.9-15.1-14.8-32.7-14.4-50.1.2-8.7 1.7-17.3 4.7-25.5 2.9-8.2 7.3-15.8 12.8-22.4 4.2-5 11.7-5.6 16.6-1.4 4.5 3.8 5.5 10.3 2.4 15.2l-.2.3c-6 9.8-8.1 21.5-6.6 32.7 1.4 11.2 6.4 21.8 13.5 29.7"/>
+                            <path fill="#DDF1FA" d="M203.6 47.5c-6 9.8-8.1 21.5-6.6 32.7 1.4 11.2 6.4 21.8 13.5 29.7 6.7 7.4 6.2 18.8-1.2 25.6-7.4 6.7-18.8 6.2-25.6-1.2-.6-.7-1.2-1.4-1.7-2.2l-.5-.7c-9.9-15.1-14.8-32.7-14.4-50.1.2-8.7 1.7-17.3 4.7-25.5 2.9-8.2 7.3-15.8 12.8-22.4 4.2-5 11.7-5.6 16.6-1.4 4.5 3.8 5.5 10.3 2.4 15.2v.3z"/>
+                            <path fill="#A9DDF3" d="M196.5 32.5l-6.4 9c-.7.9-2 1.1-2.9.5l-2.5-1.8c-.9-.7-1.1-2-.5-2.9l2.7-3.8c2.1-3 6.3-3.7 9.2-1.5l.3.2c.2 0 .2.1.1.3z"/>
+                            <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M168.9 100.6c-1.3-6.4-1.9-12.9-1.7-19.3.2-8.7 1.7-17.3 4.7-25.5 2.9-8.2 7.3-15.8 12.8-22.4 4.2-5 11.7-5.6 16.6-1.4 4.5 3.8 5.5 10.3 2.4 15.2l-.2.3c-6 9.8-8.1 21.5-6.6 32.7 1.4 11.2 6.4 21.8 13.5 29.7"/>
+                            <path fill="#DDF1FA" d="M221.5 41.5c-6 9.8-8.1 21.5-6.6 32.7 1.4 11.2 6.4 21.8 13.5 29.7 6.7 7.4 6.2 18.8-1.2 25.6-7.4 6.7-18.8 6.2-25.6-1.2-.6-.7-1.2-1.4-1.7-2.2l-.5-.7c-9.9-15.1-14.8-32.7-14.4-50.1.2-8.7 1.7-17.3 4.7-25.5 2.9-8.2 7.3-15.8 12.8-22.4 4.2-5 11.7-5.6 16.6-1.4 4.5 3.8 5.5 10.3 2.4 15.2v.3z"/>
+                            <path fill="#A9DDF3" d="M214.5 26.5l-6.4 9c-.7.9-2 1.1-2.9.5l-2.5-1.8c-.9-.7-1.1-2-.5-2.9l2.7-3.8c2.1-3 6.3-3.7 9.2-1.5l.3.2c.2.1.2.2.1.3z"/>
+                            <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M186.9 95c-1.4-6.5-2-13.1-1.8-19.7.2-8.7 1.7-17.3 4.7-25.5 2.9-8.2 7.3-15.8 12.8-22.4 4.2-5 11.7-5.6 16.6-1.4 4.5 3.8 5.5 10.3 2.4 15.2l-.2.3c-6 9.8-8.1 21.5-6.6 32.7 1.4 11.2 6.4 21.8 13.5 29.7"/>
+                          </g>
+                          <path fill="#DDF1FA" d="M174.5 229.1l-64.4-64.6 41.4-41.4c26.6-26.6 68.8-27.6 94.1-2.2l18.5 18.6-89.6 89.6z"/>
+                          <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M256.9 146.8l-82.4 82.4-64.4-64.6 41.4-41.4c1.7-1.7 3.4-3.2 5.2-4.7"/>
+                          <path fill="#FFF" d="M44.6 520.1C17.4 473.1 4.3 423.6 5.8 373c1.2-40 11.5-80.2 30.7-119.4 31-63.4 74.3-102.7 79.2-107l72.8 82.4.2-.2c-.3.3-33.2 30.2-54.7 75.8-11.6 24.7-17.8 49.4-18.2 73.3-.6 29.6 7.3 58 24.1 86.9l-95.3 55.3z"/>
+                          <path fill="#FFF" d="M173.8 239.4c17.2-10.1 35.3-19.4 54.4-28-11.2-4.4-22.7-9.1-34.6-14.2.6-9.8 1.1-19.5 1.7-29.3-11.7 2.7-23.3 5.5-34.6 8.5-.9-12.6-1.9-25.2-3-37.9-8.3 2.2-16.5 4.5-24.6 6.9-2.8-9.5-5.6-19.2-8.6-28.9-8.4 15.2-16.1 31-23.1 47.5"/>
+                          <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M173.8 239.4c17.2-10.1 35.3-19.4 54.4-28-11.2-4.4-22.7-9.1-34.6-14.2.6-9.8 1.1-19.5 1.7-29.3-11.7 2.7-23.3 5.5-34.6 8.5-.9-12.6-1.9-25.2-3-37.9-8.3 2.2-16.5 4.5-24.6 6.9-2.8-9.5-5.6-19.2-8.6-28.9-8.4 15.2-16.1 31-23.1 47.5"/>
+                          <path fill="#FFF" d="M24.5 286c0-14.3.3-28.5.8-42.5 4.4 2 8.7 3.8 13.1 5.4-1.8-12.2-3.4-24.8-4.8-37.9 5.5 3.6 10.9 6.9 16.4 9.8-.2-9.3-.3-18.8-.3-28.3 6 4.2 12 8 18 11.6"/>
+                          <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M24.5 286c0-14.3.3-28.5.8-42.5 4.4 2 8.7 3.8 13.1 5.4-1.8-12.2-3.4-24.8-4.8-37.9 5.5 3.6 10.9 6.9 16.4 9.8-.2-9.3-.3-18.8-.3-28.3 6 4.2 12 8 18 11.6"/>
+                          <path fill="#FFF" d="M108.6 388.7c6.9-13.4 14.2-25.1 21.7-35.2-4.4-1.1-8.9-2.4-13.3-3.8 9-8.7 18.2-15.9 27.5-21.5-5.6-2.3-11.2-4.9-16.8-7.7 7-5.7 14.2-10.4 21.4-13.9-5.8-3.9-11.6-8.2-17.4-12.9"/>
+                          <path fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M108.6 388.7c6.9-13.4 14.2-25.1 21.7-35.2-4.4-1.1-8.9-2.4-13.3-3.8 9-8.7 18.2-15.9 27.5-21.5-5.6-2.3-11.2-4.9-16.8-7.7 7-5.7 14.2-10.4 21.4-13.9-5.8-3.9-11.6-8.2-17.4-12.9"/>
+                          <g>
+                            <path id="finger-bg" fill="#DDF1FA" d="M307 80.5c-6.4-1.5-12.8 2.4-14.3 8.8l-.2.7c-1.3 5.6-4.3 11-8.3 15.2-4 4.2-8.9 7.3-14 8.8-5.1 1.5-10.5 1.5-15.8.2-5.3-1.3-15-7.2-19-11.6-3.8-4.3-6.7-9.2-8-14.6-1.4-5.4-1.3-11.4.3-17.1 1.6-5.7 4.7-11.1 8.8-14.9 4.1-3.8 8.8-5.8 13.8-5.6h.8c5.7.2 10.9-3.7 12-9.5 1.2-6.4-2.9-12.6-9.3-13.8-5.8-1.1-12-.9-17.8.5-5.8 1.4-11.1 4-15.8 7.2-9.3 6.5-16.1 15.6-20.4 25.6-4.3 10.1-6.1 21.4-4.9 32.6 1.2 11.3 5.6 22.2 11.8 31.3l.3.4c.4.6.9 1.2 1.3 1.7 1.2 1.4 2.6 2.5 4.1 3.5 1.7 3.4 4.4 6.2 8.1 8 8.9 4.4 18.7 7.9 29.3 8.9 10.5 1.1 21.8-.6 31.5-5.1 9.8-4.5 18-11.6 24-20 5.9-8.4 9.8-18.2 10.7-28.6.7-5.8-3.1-11.2-9-12.6z"/>
+                            <path id="fingernail-1" fill="#A9DDF3" d="M309.4 100.4l-1.7-.4c-2.3-.5-3.7-2.7-3.2-5l2.6-12.4c5.2 1.1 8.5 6.2 7.4 11.3l-.7 3.5c-.5 2.1-2.4 3.4-4.4 3z"/>
+                            <path id="fingernail-2" fill="#A9DDF3" d="M260.4 35.5h-12.6c-1.2 0-2.2-1-2.2-2.2v-2.8c0-1.2 1-2.2 2.2-2.2h5.9c3.8 0 6.9 3.1 6.9 6.9.1.2-.1.3-.2.3z"/>
+                            <path id="finger-border" fill="none" stroke="#3A5E77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M195 93c-1.2-11.3.6-22.6 4.9-32.6 4.3-10 11.1-19.1 20.4-25.6 4.6-3.2 10-5.8 15.8-7.2 5.8-1.4 12-1.6 17.8-.5 6.4 1.2 10.6 7.4 9.3 13.8-1.1 5.8-6.3 9.7-12 9.5h-.8c-5-.2-9.7 1.8-13.8 5.6-4.1 3.8-7.2 9.2-8.8 14.9-1.6 5.7-1.6 11.7-.3 17.1 1.3 5.4 4.2 10.3 8 14.6 4.5 5 13.7 10.3 19 11.6 5.3 1.3 10.6 1.3 15.8-.2 5.1-1.5 10-4.6 14-8.8 4-4.2 6.9-9.6 8.3-15.2l.2-.7c1.5-6.4 7.9-10.3 14.3-8.8 5.8 1.4 9.6 6.9 9.1 12.7-1 10.4-4.8 20.2-10.7 28.6-5.9 8.4-14.2 15.5-24 20-7.5 3.5-15.9 5.3-24.2 5.4"/>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="durability">
+                      <h3>75%</h3>
+                      <h4>Конверсия</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="top-content">
+            <span>
+              <a href="/">
+                <img src="http://sarabianchi.it/code-images/landing-page/logo.png">
+              </a>
+            </span>
+            <span>
+              <a class="login" href="/login">
+                Вход
+              </a>
+            </span>
+          </section>
+          <section class="bottom-content">
+            <div class="content-left">
+              <h1 class="title">InstaTop</h1>
+              <p>Сервис предлогает продвинуть свой аккаунт в инстаграмм. Только живой трафик.</p>
+              <a class="login" href="/login">3 дня бесплатно</a>
+            </div>
+
+            <div class="content-right">
+              <p>28th Apr 2019 <br>
+              pre-alpha version for my lady<br>
+              Владимир сделал это ;)</p>
+            </div>
+          </section>
+
+          <!-- parallax background -->
+          <div class="bg"></div>
+        </div>
+        <!--  -->
+        <div id="scrolldown">
+         <p>Прокрути</p>
+         <div class="mouse">
+           <span><p>↓</p></span>
+         </div>
+       </div>
+      </div>
+      <div class="section" id="section3">
+        <div id="alert">
+          <div class="title"></div>
+          <div class="desc"></div>
+        </div>
+        <div class="cont">
+
+          <div class="form profilesList">
+            <h2>Список желаний</h2>
+            <div class="search">
+              🔍<input class="search_input" type="text" placeholder="Начните писать название...">
+            </div>
+            <div class="people">
+              <ul class="people-list">
+                <!-- контент -->
+              </ul>
+            </div>
+          </div>
+          <div class="sub-cont">
+            <div class="img">
+              <div class="img__text m--up">
+                <h2>Книга Желаний</h2>
+                <p>Хранилище желаний для одного человека в мире, но для самого лучшего.</p>
+                <div class="send_btn">Отправить желания другу</div>
+              </div>
+              <div class="img__text m--in">
+                <h2>Желание</h2>
+                <p>Если данные о желании не соответствуют действительности - измените их.</p>
+              </div>
+              <div class="img__btn">
+                <span class="m--up add-new-people">Добавить</span>
+                <span class="m--in edit2">Изменить</span>
+              </div>
+            </div>
+            <div class="form profile">
+              <div class="control">
+                <span class="back"><</span>
+                <span class="edit">✎</span>
+                <span class="remove">✕</span>
+              </div>
+              <h2>Данные профиля</h2>
+              <label class="form-elem name">
+                <span>Название</span>
+                <input disabled type="text" placeholder="Иванов Иван Иванович" />
+              </label>
+              <label class="form-elem ">
+                <span>Цена</span>
+                <input disabled type="number" placeholder="500р" />
+              </label>
+              <label class="form-elem">
+                <span>Где она есть</span>
+                <input disabled type="text" placeholder="магазин" />
+              </label>
+              <label class="form-elem">
+                <span>Где она есть ещё</span>
+                <input disabled type="text" placeholder="ещё магазин" />
+              </label>
+              <label class="form-elem">
+                <span>ссылка</span>
+                <input disabled type="email" placeholder="https://your-link.ru"/>
+              </label>
+              <label class="form-elem comment">
+                <span>Примечание</span>
+                <textarea disabled rows="3" cols="80" placeholder="Текст примечания"></textarea>
+              </label>
+            </div>
+          </div>
+        </div>
+            <!-- <script src="js/index.js"></script> -->
+      </div>
+    </div>
   </body>
-</html>
+  <script src="dataGrid/js_dataGrid.js"></script>
+  <script src="rainbow-custom.min.js"></script>
+  <script src="dataGrid/index.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/findShapeIndex.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js'></script>
+  <script src="instagram/index.js"></script>
+  <script src="js/index.js"></script>
