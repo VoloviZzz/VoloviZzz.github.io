@@ -48,7 +48,7 @@ var Book = {
 	},
 	rand: function getRandomInt(min, max){
 	  return Math.floor(Math.random() * (max - min + 1)) + min;
-	}, 
+	},
 	get_array_people: function  () {
 	  if (localStorage.getItem('people') == null) {
 		localStorage.setItem('people', JSON.stringify([
@@ -190,7 +190,7 @@ var Book = {
 	},
 	copyLink(link) {
 		var copytext = document.createElement('input')
-		 copytext.value = link; 
+		 copytext.value = link;
 		 document.body.appendChild(copytext)
 		 copytext.select()
 		 document.execCommand('copy')
@@ -201,7 +201,7 @@ var Book = {
 	},
 	generateLink() {
 		var list = localStorage.getItem('people');
-		var link_list = 'http://elmsoftwere.ru/?' + encodeURIComponent(list);
+		var link_list = 'https://volovizzz.github.io/?' + encodeURIComponent(list);
 		document.querySelector('.send_btn').innerHTML = `<a onclick="Book.copyLink('${link_list}')" href='#'>Кликните, что бы скопировать ссылку</a>`;
 		var url = new URL(link_list);
 	},
@@ -222,8 +222,8 @@ var Book = {
 		document.querySelectorAll('.people-elem').forEach(elem => {
 				elem.addEventListener('click', Book.open_profile);
 			});
-			if (decodeURIComponent(window.location.search)) { 
-				document.querySelector('.form.profilesList h2').innerText = 'Список желаний Вашего друга'; 
+			if (decodeURIComponent(window.location.search)) {
+				document.querySelector('.form.profilesList h2').innerText = 'Список желаний Вашего друга';
 				document.querySelector('.send_btn').innerHTML = `<a href="http://elmsoftwere.ru">Перейти на свой список желаний</a>`;
 			}
 	},
