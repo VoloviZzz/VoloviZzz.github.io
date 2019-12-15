@@ -224,7 +224,7 @@ var Book = {
 			});
 			if (decodeURIComponent(window.location.search)) {
 				document.querySelector('.form.profilesList h2').innerText = 'Список желаний Вашего друга';
-				document.querySelector('.send_btn').innerHTML = `<a href="http://elmsoftwere.ru">Перейти на свой список желаний</a>`;
+				document.querySelector('.send_btn').innerHTML = `<a href="https://volovizzz.github.io">Перейти на свой список желаний</a>`;
 			}
 	},
 	open_profile: function() {
