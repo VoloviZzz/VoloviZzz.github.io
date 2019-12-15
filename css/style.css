@@ -85,7 +85,7 @@ input, button {
 .cont {
   overflow: hidden;
   position: absolute;
-  width: 900px;
+  width: 1000px;
   height: 550px;
   top: 50%;
   left: 50%;
@@ -96,7 +96,7 @@ input, button {
 
 .form {
   position: relative;
-  width: 640px;
+  width: 650px;
   height: 100%;
   transition: -webkit-transform 0.7s ease-in-out;
   transition: transform 0.7s ease-in-out;
@@ -107,19 +107,19 @@ input, button {
 .sub-cont {
   overflow: hidden;
   position: absolute;
-  left: 640px;
+  left: 700px;
   top: 0;
   width: 900px;
   height: 100%;
-  padding-left: 260px;
+  padding-left: 295px;
   background: #fff;
   transition: -webkit-transform 0.7s ease-in-out;
   transition: transform 0.7s ease-in-out;
   transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 .cont.s--profile .sub-cont {
-  -webkit-transform: translate3d(-640px, 0, 0);
-          transform: translate3d(-640px, 0, 0);
+  -webkit-transform: translate3d(-700px, 0, 0);
+  transform: translate3d(-702px, 0, 0);
 }
 
 button {
@@ -139,7 +139,7 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  width: 260px;
+  width: 300px;
   height: 100%;
   padding-top: 360px;
 }
@@ -167,14 +167,14 @@ button {
 }
 .cont.s--profile .img:before {
   -webkit-transform: translate3d(640px, 0, 0);
-          transform: translate3d(640px, 0, 0);
+  transform: translate3d(600px, 0, 0);
 }
 .img__text {
   z-index: 2;
   position: absolute;
   left: 0;
   top: 50px;
-  width: 100%;
+  /* width: 100%; */
   padding: 0 20px;
   text-align: center;
   color: #fff;
@@ -208,7 +208,8 @@ button {
 .send_btn{
   background-color:#00000042;
   padding: 10px;
-  margin-top: 5px;
+  margin: 5px auto 0 0;
+  /* width:  150px; */
   color: #fff;
   cursor: pointer;
   border: solid 2px;
